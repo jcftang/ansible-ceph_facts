@@ -127,6 +127,7 @@ def run_ceph_facts(module):
         for (k,v) in rados_df_ds.items():
             setup_options["rados_df_%s" % k] = v
 
+    # business as usual
     for (k, v) in facts.items():                                                
         setup_options["ceph_%s" % k.replace('-', '_')] = v
 
